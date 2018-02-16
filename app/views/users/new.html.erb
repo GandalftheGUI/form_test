@@ -1,1 +1,29 @@
-hello world
+<%= form_for(@user) do |f| %>
+  <div>
+    <%= f.label :first_name do %>
+      First Name
+    <% end %>
+
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div>
+    <%= f.label :last_name do %>
+      Last Name
+    <% end %>
+
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= f.label :email do %>
+      Email
+    <% end %>
+
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.submit "Take Test" %>
+  </div>
+<% end %>
