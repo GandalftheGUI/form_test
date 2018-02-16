@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180216222656) do
 
   create_table "user_answers", force: :cascade do |t|
     t.integer "question_id", null: false
+    t.integer "user_id", null: false
     t.text "answer_text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,0 +1,15 @@
+hello quiz
+
+<%= @current_question.question_text %>
+
+<%= form_for(UserAnswer.new) do |f| %>
+  <%= f.hidden_field :question_id, value: @current_question.id %>
+  <%= f.hidden_field :user_id, value: @user.id %>
+  <div>
+    <%= f.text_area :answer_text %>
+  </div>
+
+  <div>
+    <%= f.submit "Next Question" %>
+  </div>
+<% end %>
