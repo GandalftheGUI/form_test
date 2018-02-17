@@ -8,5 +8,5 @@ Rails.application.routes.draw do
       get :complete
     end
   end
-  resources :user_answers, only: [:create]
+  resources :user_answers, only: [:update]
 end

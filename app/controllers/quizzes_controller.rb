@@ -4,8 +4,12 @@ class QuizzesController < ApplicationController
 
   def show
     @current_question = get_next_question
-
-    redirect_to complete_quiz_path(@quiz) if @current_question.nil?
+    
+    if @current_question.nil?
+      redirect_to complete_quiz_path(@quiz)
+    else
+      @user_answer = UserAnswer.create!(question_id: @current_question.id, user_id: @user.id)
+    end
   end
 
   def complete
