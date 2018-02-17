@@ -1,4 +1,5 @@
 Functionality
+------------------------------------------------------
 
   All requested functionality has been implemented. A user can enter their name and email and can start the quiz. Even if a user refreshes the page during a quiz they will not lose their place nor will the timer reset. The user can click next to submit and access the next question, additionally when the timer runs out the questions is also submitted. Once the quiz is done the user is shown the completed quiz page. Attempting to access the earlier questions will direct the user to the completed quiz page.
 
