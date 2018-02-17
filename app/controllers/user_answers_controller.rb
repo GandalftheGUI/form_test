@@ -3,6 +3,7 @@ class UserAnswersController < ApplicationController
 
   def update
     @user_answer.update_attributes!(answer_params)
+    @user_answer.update_attributes(completed: true)
     redirect_to quiz_path(@user_answer.question.quiz_id, user_id: @user_answer.user_id)
   end
 

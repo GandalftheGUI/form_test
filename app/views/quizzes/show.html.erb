@@ -1,6 +1,17 @@
-hello quiz
 
+<%# TODO: Move to its own file %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<%= javascript_tag do %>
+
+<% end %>
+
+<div>
+  Time left: <%= @time_left %>
+</div>
+
+<div>
 <%= @current_question.question_text %>
+</div>
 
 <%= form_for(@user_answer) do |f| %>
   <div>
