@@ -7,16 +7,16 @@ Functionality
 Implementation notes
 ------------------------------------------------------
 
-#### Quizzes as a table
+#### 1. Quizzes as a table
 I implemented the quiz as its own table. I did this so that administrators of the platform could potentially add new quizzes depending on the position being screened for.
 
-#### All questions load from the same URL
+#### 2. All questions load from the same URL
 I did not want the users trying to exploit the URL to change which question they are currently on. The current question is always loaded based on which questions the user has submitted so far. I also wanted a way for users continue from the same point, in case the user lost connection or accidentally navigated away from the page.
 
-#### About the timer:
+#### 3. About the timer:
 Currently only implemented in the front end. The server does keep track of time remaining (when the question was started and allowed duration for the question, 'questions.time_limit') and while I would lock out input to the question on the server after the time has run out I have not yet implemented a way to ensure the question to be saved right before that happens.
 
-#### About user authentication:
+#### 4. About user authentication:
 There is none, if a user attempts to access the quiz again by inputing the same name/email it will create a new user and a new set of answers. Any user could also access another users quiz by changing request the parameters. User authentication would fix these issues. Additionally, going forward I would have some sort of token in the link as well as validate against the email the user entered to ensure the user cannot take the same quiz again.
 
 
